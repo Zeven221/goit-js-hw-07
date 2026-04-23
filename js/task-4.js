@@ -14,8 +14,9 @@ form.addEventListener('submit', e => {
     password: elements.get('password').trim(),
   };
   console.log(values)
+  form.reset()
   }
 
-form.reset()
+
 
 });
