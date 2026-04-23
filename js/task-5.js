@@ -8,11 +8,6 @@ const span = document.querySelector('.color');
 const body = document.body;
 button.addEventListener('click', e => {
   const value = getRandomHexColor()
-  const markup = `<style>
-      body {
-        background-color: ${value};
-      }
-    </style>`;
     span.textContent = value
-    body.insertAdjacentHTML("afterbegin", markup)
+    body.style.backgroundColor = value
 });
