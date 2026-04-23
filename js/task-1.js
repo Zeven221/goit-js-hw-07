@@ -1,7 +1,10 @@
-function makeTransaction(quantity, pricePerDroid) {
-  return `You ordered ${quantity} droids worth ${quantity * pricePerDroid} credits!`;
+const info = (object) => {
+    const allLi = object.querySelectorAll("ul#categories>li")
+    console.log("Number of categories:", allLi.length)
+    for(const li of allLi){
+        console.log(li.firstElementChild.textContent)
+        console.log(li.lastElementChild.childElementCount)       
+    }
+    
 }
-
-console.log(makeTransaction(5, 3000)); // "You ordered 5 droids worth 15000 credits!"
-console.log(makeTransaction(3, 1000)); // "You ordered 3 droids worth 3000 credits!"
-console.log(makeTransaction(10, 500)); // "You ordered 10 droids worth 5000 credits!"
+info(document.querySelector("ul#categories"))
